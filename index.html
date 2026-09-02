@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>9 клас — хімія, фізика, математика</title>
+<meta name="description" content="Тренажери з хімії, фізики та математики для 9 класу: уроки, нескінченні задачі з перевіркою, розбір власних помилок." />
+<meta name="theme-color" content="#0f1720" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+<style>
+  /* Кольори ті самі, що в самих застосунках, — щоб перехід не був різким. */
+  :root {
+    --bg: #f6f8fb;
+    --surface: #ffffff;
+    --text: #0f1720;
+    --muted: #5a6672;
+    --border: #dce3ec;
+    --accent: #1f6feb;
+    --shadow: 0 1px 2px rgba(15, 23, 32, .06), 0 8px 24px rgba(15, 23, 32, .06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1720;
+      --surface: #172230;
+      --text: #eef2f7;
+      --muted: #9aa7b4;
+      --border: #26344a;
+      --accent: #4d9bff;
+      --shadow: none;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: clamp(1.5rem, 5vw, 3rem) 1rem calc(2rem + env(safe-area-inset-bottom));
+    min-height: 100vh;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 940px; margin: 0 auto; }
+
+  header { margin-bottom: clamp(1.5rem, 4vw, 2.5rem); }
+
+  h1 {
+    margin: 0 0 .35rem;
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .sub { margin: 0; color: var(--muted); font-size: clamp(1rem, 2.6vw, 1.15rem); }
+
+  .tiles {
+    display: grid;
+    gap: clamp(.75rem, 2vw, 1.25rem);
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 700px) {
+    .tiles { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .tile {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: clamp(1.1rem, 3vw, 1.6rem);
+    color: inherit;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+
+  .tile:hover, .tile:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    outline: none;
+  }
+
+  .tile:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
+
+  .tile__icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: .35rem;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+  }
+
+  .tile__icon svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  .tile__name { font-size: 1.35rem; font-weight: 700; }
+  .tile__what { margin: 0; color: var(--muted); font-size: .95rem; }
+  .tile__meta { margin: .35rem 0 0; color: var(--muted); font-size: .85rem; }
+
+  .tile__go {
+    margin-top: auto;
+    padding-top: .75rem;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: .95rem;
+  }
+
+  footer {
+    margin-top: clamp(2rem, 5vw, 3rem);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+
+  footer p { margin: .35rem 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>9 клас</h1>
+    <p class="sub">Три тренажери: пояснюють тему, дають задачі й розбирають саме твою помилку.</p>
+  </header>
+
+  <main class="tiles">
+    <a class="tile" href="https://himiya.9class.org.ua">
+      <span class="tile__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6.2L4.8 18a1.6 1.6 0 0 0 1.4 2.4h11.6a1.6 1.6 0 0 0 1.4-2.4L14 9.2V3M7.2 14.5h9.6"/></svg>
+      </span>
+      <span class="tile__name">Хімія</span>
+      <p class="tile__what">Від мови хімії до органіки. Формули, рівняння, розчини, реакції в розчинах.</p>
+      <p class="tile__meta">7 розділів · 31 тема · 7–9 клас</p>
+      <span class="tile__go">Відкрити →</span>
+    </a>
+
+    <a class="tile" href="https://fizyka.9class.org.ua">
+      <span class="tile__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.8"/><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/></svg>
+      </span>
+      <span class="tile__name">Фізика</span>
+      <p class="tile__what">Рух і сили, теплові й електричні явища, магнетизм, оптика, атом, закони збереження.</p>
+      <p class="tile__meta">10 розділів · 44 теми · 7–9 клас</p>
+      <span class="tile__go">Відкрити →</span>
+    </a>
+
+    <a class="tile" href="https://matematyka.9class.org.ua">
+      <span class="tile__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M12 6.5v11M6.5 12h11"/></svg>
+      </span>
+      <span class="tile__name">Математика</span>
+      <p class="tile__what">Алгебра й геометрія разом: нерівності, парабола, прогресії, трикутники, вектори.</p>
+      <p class="tile__meta">2 курси · 33 теми · 9 клас</p>
+      <span class="tile__go">Відкрити →</span>
+    </a>
+  </main>
+
+  <footer>
+    <p>У кожному застосунку свій вхід і свій прогрес. Реєстрація — за кодом-запрошенням від власника.</p>
+    <p>Курс, задачі та перевірка відповідей працюють без інтернету. Мережа потрібна лише для розбору задачі з фото чи креслення.</p>
+  </footer>
+</div>
+</body>
+</html>
